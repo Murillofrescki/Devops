@@ -8,26 +8,26 @@ class TestSistemaNotas(unittest.TestCase):
         alunos.clear()
 
     def test_adicionar_aluno(self):
-        adicionar_aluno("Rodrigo")
-        self.assertIn("Rodrigo", alunos)
+        adicionar_aluno("Murillo")
+        self.assertIn("Murillo", alunos)
 
     def test_adicionar_nota(self):
-        adicionar_aluno("Rodrigo")
-        adicionar_nota("Rodrigo", 8)
-        self.assertEqual(alunos["Rodrigo"], [8])
+        adicionar_aluno("Murillo")
+        adicionar_nota("Murillo", 8)
+        self.assertEqual(alunos["Murillo"], [8])
 
     def test_calcular_media(self):
-        adicionar_aluno("Rodrigo")
-        adicionar_nota("Rodrigo", 8)
-        adicionar_nota("Rodrigo", 10)
-        self.assertEqual(calcular_media("Rodrigo"), 9)
+        adicionar_aluno("Murillo")
+        adicionar_nota("Murillo", 8)
+        adicionar_nota("Murillo", 10)
+        self.assertEqual(calcular_media("Murillo"), 9)
 
     def test_media_sem_notas(self):
-        adicionar_aluno("Rodrigo")
-        self.assertEqual(calcular_media("Rodrigo"), 0)
+        adicionar_aluno("Murillo")
+        self.assertEqual(calcular_media("Murillo"), 0)
 
     def test_listar_alunos(self):
-        adicionar_aluno("Rodrigo")
+        adicionar_aluno("Murillo")
         self.assertIsInstance(listar_alunos(), dict)
 
     def test_adicionar_nota_sem_aluno(self):
